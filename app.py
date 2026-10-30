@@ -25,6 +25,14 @@ CSS = """<style>
 .block-container [data-testid="stMarkdownContainer"] p, .block-container [data-testid="stMarkdownContainer"] li, .block-container table.t, .topbar, .sec, .na, .note, .bl,
 .block-container label p, .block-container input, .block-container button p { font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
 .block-container [data-testid="stMarkdownContainer"] p, .block-container [data-testid="stMarkdownContainer"] li { font-size: .9rem; line-height: 1.5; color: #1B2430; max-width: 74ch; }
+/* Keep all main-page Streamlit text dark on the light background; leave the dark sidebar styling unchanged. */
+.block-container, .block-container h1, .block-container h2, .block-container h3, .block-container h4,
+.block-container [data-testid="stCaptionContainer"], .block-container [data-testid="stWidgetLabel"],
+.block-container [data-testid="stMarkdownContainer"], .block-container [data-testid="stMarkdownContainer"] *,
+.block-container label, .block-container label p, .block-container input, .block-container textarea,
+.block-container [data-baseweb="select"] *, .block-container [data-testid="stMetric"] * {
+    color: #1B2430;
+}
 .block-container [data-testid="stMarkdownContainer"] p { margin: .15rem 0 .5rem; }
 .sec { font-size: .78rem; font-weight: 600; color: #0F1B2D; letter-spacing: .02em; margin: 1.25rem 0 .45rem; padding-bottom: .25rem; border-bottom: 1px solid #D9DEE5; }
 .sec:first-child { margin-top: .2rem; }

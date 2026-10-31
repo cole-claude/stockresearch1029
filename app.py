@@ -50,6 +50,12 @@ CSS = """<style>
 .sec { font-size: .78rem; font-weight: 600; color: #0F1B2D; letter-spacing: .02em; margin: 1.25rem 0 .45rem; padding-bottom: .25rem; border-bottom: 1px solid #D9DEE5; }
 .sec:first-child { margin-top: .2rem; }
 .h1 { font-size: 1.15rem; font-weight: 600; color: #0F1B2D; margin: 0 0 .3rem; }
+/* The page is always light. In a dark system theme Streamlit turns inherited text near-white, so set the colors that were inherited. */
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] { color: #1B2430; }
+[data-testid="stMain"] [data-testid="stExpander"] summary, [data-testid="stMain"] [data-testid="stExpander"] summary * { color: #1B2430; }
+[data-testid="stMain"] [data-testid="InputInstructions"] { color: #5B6676 !important; }
+[data-testid="stMain"] [data-testid="stTextInputRootElement"] { background: #fff; border: 1px solid #D9DEE5; }
+[data-testid="stMain"] [data-testid="stTextInput"] input { color: #1B2430; background: #fff; }
 /* sidebar: compact navy rail; bounded drawer on phones */
 [data-testid="stSidebar"] { background: #0F1B2D; }
 @media (max-width: 767px) { [data-testid="stSidebar"] { max-width: min(290px, 80vw) !important; min-width: 0 !important; } }
